@@ -1,0 +1,13 @@
+// var otherJs = require("wxs");
+
+var name = "xiaoming";
+var age = 18;
+var sayHello = function(obj){
+  return obj;
+} 
+
+module.exports = {
+  name: name,
+  age:age,
+  sayHello: sayHello
+}

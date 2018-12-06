@@ -1,0 +1,74 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.test{
+  /* 把view内定义为flex块元素 */
+  display: flex; 
+
+  /* 横着排序 */
+  flex-direction: row;
+  /* 横着，倒着排序 -- 了解一下 */
+  /* flex-direction: row-reverse; */
+  /* 竖着排序 */
+  /* flex-direction: column; */
+  /* 竖着，倒着排序 -- 了解一下 */
+  /* flex-direction: column-reverse; */
+
+  /* 宽度过大不换行 */
+  /* flex-wrap: nowrap; */
+  /* 宽度过大换行 */
+  /* flex-wrap: wrap; */
+
+  /* 左对齐 */
+  justify-content: flex-start;
+  /* 左对齐 */
+  /* justify-content: flex-end; */
+  /* 居中 */
+  /* justify-content:center; */
+}
+
+.a{
+  height:100rpx;background-color:red;
+  order: 1;
+  /* width占比，宽度失效 */
+  flex: 3;
+}
+.b{
+  height:100rpx;background-color:green;
+  order:2;
+  flex: 1;
+}
+.c{
+  height:100rpx;background-color:yellow;
+  order:3;
+  flex:1;
+}
+.d{
+  height:100rpx;background-color:blue;
+  order: 4;
+  flex: 1;
+}
+.e{
+  height:100rpx;background-color:black;
+  order: 5;
+  flex: 1;
+}

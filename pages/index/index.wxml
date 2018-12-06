@@ -1,0 +1,113 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+  <!-- 从这开始看 -->
+  <!-- <view>hello {{name}}!</view>
+  <button bind:tap='changeName' data-customdata='自定义的数据,以data-开头'>点击</button> -->
+  <!-- 事件 -->
+  <!-- <view>
+    <view>touchstart	手指触摸动作开始	</view>
+    <view>touchmove	  手指触摸后移动	</view>
+    <view>touchcancel	手指触摸动作被打断，如来电提醒，弹窗	</view>
+    <view>touchend	  手指触摸动作结束	</view>
+    <view>tap	        手指触摸后马上离开	</view>
+    <view>longpress	  手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发	1.5.0</view>
+    <view>longtap	    手指触摸后，超过350ms再离开（推荐使用longpress事件代替）	</view>
+    <view>transitionend	      会在 WXSS transition 或 wx.createAnimation 动画结束后触发	</view>
+    <view>animationstart	    会在一个 WXSS animation 动画开始时触发	</view>
+    <view>animationiteration	会在一个 WXSS animation 一次迭代结束时触发	</view>
+    <view>animationend	      会在一个 WXSS animation 动画完成时触发	</view>
+    <view>touchforcechange	  在支持 3D Touch 的 iPhone 设备，重按时会触发</view>
+  </view> -->
+
+  <!-- <checkbox checked='{{false}}'></checkbox>
+  <view hidden='{{flag ? true :false}}'>hide</view> -->
+  
+  <!-- 数据循环绑定,默认有index和item项 -->
+  <!-- <view wx:for="{{array}}">
+    {{index}} - {{item.name}}
+  </view>
+  <view wx:for="{{array}}" wx:for-index="id" wx:for-item="user">
+    {{id}} - {{user.name}} 
+  </view> -->
+
+  
+  <!-- 事件冒泡 -->
+  <!-- 点击 inner view 会先后调用handleTap3和handleTap2(因为tap事件会冒泡到 middle view，而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，
+  点击 middle view 会触发handleTap2，点击 outer view 会触发handleTap1。 -->
+  <!-- <view id="outer" bindtap="handleTap1">
+  outer view
+  <view id="middle" catchtap="handleTap2">
+    middle view
+    <view id="inner" bindtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view> -->
+
+<!-- 事件捕获 -->
+<!-- 捕获阶段监听事件时，可以采用capture-bind、capture-catch关键字，后者将中断捕获阶段和取消冒泡阶段。
+在下面的代码中，点击 inner view 会先后调用handleTap2、handleTap4、handleTap3、handleTap1。
+<view id="outer" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
+  outer view
+  <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+如果将上面代码中的第一个capture-bind改为capture-catch，将只触发handleTap2。
+<view id="outer" bind:touchstart="handleTap1" capture-catch:touchstart="handleTap2">
+  outer view
+  <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view> -->
+
+<!-- 不同页引用模板 import和include -->
+<!-- <view>
+-- template.wxml -- 
+<template name="item">
+  <text>{{text}}</text>
+</template>
+
+-- index.wxml --
+引用模板 
+<import src="item.wxml"/>
+<template is="item" data="{{text: 'forbar'}}"/>
+
+import  引用模板 -- 只会 import 目标文件中定义的 template，而不会 import 目标文件 import 的 template
+include 将目标文件除了 <template/> <wxs/> 外的整个代码引入
+<include src="footer.wxml"/>
+https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/import.html
+</view> -->
+
+<!-- 同页引用模板 import和include -->
+<!-- <template name="item">
+  <view>
+    <text> name: {{name}} </text>
+    <text> age: {{age}} </text>
+  </view>
+</template>
+<template is="item" data="{{...person}}"/> -->
+
+<!-- 引用wxs -->
+<!-- <view>
+  <wxs src="test.wxs" module="item"></wxs>
+  <view>{{item.name}}</view>
+  <view>{{item.age}}</view>
+  <view>{{item.sayHello("test")}}</view>
+</view>
+ -->
+
+<!-- 样式flex元素排列 -->
+<view class='test'>
+  <view class='a'>a</view>
+  <view class='b'>b</view>
+  <view class='c'>c</view>
+  <view class='d'>d</view>
+  <view class='e'>e</view>
+</view>
+
+</view>
