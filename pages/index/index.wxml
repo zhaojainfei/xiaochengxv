@@ -102,12 +102,29 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/import.html
  -->
 
 <!-- 样式flex元素排列 -->
-<view class='test'>
+<!-- <view class='test'>
   <view class='a'>a</view>
   <view class='b'>b</view>
   <view class='c'>c</view>
   <view class='d'>d</view>
   <view class='e'>e</view>
-</view>
+</view> -->
 
+<!-- 组件 -->
+<!-- <view > -->
+  <!-- hover-class : 点击触发的样式，手指松开恢复之前样式 -->
+  <!-- hover-start-time：手指点击多少毫秒触发样式，默认是50ms -->
+  <!-- hover-stay-time：样式持续时间 -->
+<!-- </view> -->
+
+<!-- <scroll-view scroll-y="true" style='height:200rpx;' bind:scroll="scroll"> -->
+  <!-- bindscrolltoupper -- 滚动到顶部触发事件 upper-threshold:距离顶部多少px时触发时间，会触发好几次-->
+  <!-- bindscrolltolower -- 滚动到底部触发事件  lower-threshold:距离底部多少px时触发时间，会触发好几次-->
+  <!-- scroll-top初始化滚动条位置 -->
+  <!-- enable-back-to-top 安卓，ios中当点击顶部标题时，滚动条回到最上方 -->
+  <!-- scroll-into-view 滚动条默认在子元素id=a的view那里 -->
+  <!-- <view class='a'>a</view>
+  <view class='b'>b</view>
+  <view class='c'>c</view>
+</scroll-view> -->
 </view>

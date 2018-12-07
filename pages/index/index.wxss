@@ -40,35 +40,35 @@
 
   /* 左对齐 */
   justify-content: flex-start;
-  /* 左对齐 */
+  /* 右对齐 */
   /* justify-content: flex-end; */
   /* 居中 */
   /* justify-content:center; */
 }
 
 .a{
-  height:100rpx;background-color:red;
+  width: 100%;height:100rpx;background-color:red;
   order: 1;
   /* width占比，宽度失效 */
   flex: 3;
 }
 .b{
-  height:100rpx;background-color:green;
+  width: 100%;height:100rpx;background-color:green;
   order:2;
   flex: 1;
 }
 .c{
-  height:100rpx;background-color:yellow;
+  width: 100%;height:100rpx;background-color:yellow;
   order:3;
   flex:1;
 }
 .d{
-  height:100rpx;background-color:blue;
+  width: 100%;height:100rpx;background-color:blue;
   order: 4;
   flex: 1;
 }
 .e{
-  height:100rpx;background-color:black;
+  width: 100%; height:100rpx;background-color:black;
   order: 5;
   flex: 1;
 }
